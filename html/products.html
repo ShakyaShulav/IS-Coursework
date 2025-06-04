@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/products.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo/finalheadicon.ico" />
+    <!-- --------------------- -->
+    <!--    Internal  CSS      -->
+    <!-- --------------------- -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif, "Trebuchet MS", "Lucida Sans Unicode",
+          "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- --------------------- -->
+    <!--    Nav Bar Section    -->
+    <!-- --------------------- -->
+    <header>
+      <div class="header-content">
+        <div class="headerup">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="/images/logo/transparent_logo.png"
+                alt="image_of_logo"
+              />
+              <!-- team logo -->
+            </a>
+          </div>
+          <div class="searchbar">
+            <!--    search bar -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="/html/products.html" method="GET">
+              <input
+                id="searchInput"
+                name="search"
+                type="text"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+          <div id="autocomplete" class="autocomplete"></div>
+
+          <div class="acc-cart">
+            <div class="account">
+              <a href="/html/login.html"
+                ><i class="fa-solid fa-user"></i> Account</a
+              >
+            </div>
+            <div class="cart-btn">
+              <a href="javascript:void(0)" onclick="openNav()"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="headerdown">
+          <div class="headerdown-content">
+            <a href="/html/index.html"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+            <a href="/html/products.html"
+              ><i class="fa-solid fa-shop"></i> Shop</a
+            >
+            <a href="/html/aboutus.html"
+              ><i class="fa-solid fa-users"></i> About us</a
+            >
+            <a href="/html/blog.html"><i class="fa-solid fa-blog"></i> Blog</a>
+            <a href="/html/research.html"
+              ><i class="fa-solid fa-book-atlas"></i> Research</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="overall">
+      <!-- --------------------- -->
+      <!--    Filter  Section    -->
+      <!-- --------------------- -->
+      <div id="filter">
+        <form method="GET" id="filter-form">
+          <div class="parent-filter-container">
+            <div class="filter-container">
+              <div class="text-container">
+                <p>Filter by:</p>
+              </div>
+              <ul>
+                <li class="dropdown">
+                  <div class="type-container">
+                    Category <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul class="sub-menu">
+                    <li>
+                      <input type="checkbox" name="category[]" value="Men" />
+                      <label for="cateogry-men"> Men</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="category[]" value="Women" />
+                      <label for="category-women"> Women</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="category[]" value="Kids" />
+                      <label for="category-kids"> Kids</label><br />
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <div class="type-container">
+                    Brand <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <ul class="sub-menu">
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Titan" />
+                      <label for="titan"> Titan</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Rolex" />
+                      <label for="rolex"> Rolex</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Casio" />
+                      <label for="casio"> Casio</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Matrix" />
+                      <label for="matrix"> Matrix</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Selloria" />
+                      <label for="selloria"> Selloria</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Spiky" />
+                      <label for="spiky"> Spiky</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Carlton" />
+                      <label for="carlton"> Carlton</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand[]"
+                        value="Louis Devin"
+                      />
+                      <label for="louisdevin"> Louis Devin</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand[]"
+                        value="Fast Track"
+                      />
+                      <label for="fasttrack"> Fast track</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="brand[]" value="Bulova" />
+                      <label for="bulova"> Bulova</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="brand[]"
+                        value="Shock N Shop"
+                      />
+                      <label for="shocknshop"> Shock N Shop</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="clear-filters" class="filter-btn">Clear All</button>
+            <button type="submit" class="filter-btn">Filter</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="two">
+        <!-- --------------------- -->
+        <!--    Sorting  Section   -->
+        <!-- --------------------- -->
+        <div id="sort">
+          <form name="sortt" id="sort-box" action="#">
+            Sort by:
+            <select name="sorting" id="sort-option-box">
+              <option value="a-z" selected>Alphabetical : A-Z</option>
+              <option value="high-low">Price : high to low</option>
+              <option value="low-high">Price : low to high</option>
+            </select>
+          </form>
+        </div>
+        <!-- --------------------- -->
+        <!--    Products  Section  -->
+        <!-- --------------------- -->
+        <div id="all-products"></div>
+      </div>
+    </section>
+    <!-- --------------------- -->
+    <!--   Overlay-content     -->
+    <!-- --------------------- -->
+    <div id="myNav" class="overlay-container">
+      <div class="overlay-header">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <h2>My Cart</h2>
+      </div>
+
+      <div class="cart-items">
+        <!-- Items will be dynamically added here -->
+      </div>
+
+      <div class="overlay-parent-footer">
+        <br />
+        <div class="total-price">
+          <h5>Total</h5>
+          <div id="cart-total">0.00 Rs</div>
+        </div>
+        <div class="overlay-footer">
+          <button onclick="clearCart()" id="clear-cart">Clear</button>
+          <button onclick="checkout()" id="checkout-button">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------- -->
+    <!--       Top-button      -->
+    <!-- --------------------- -->
+    <div class="top-button">
+      <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+
+    <!-- --------------------- -->
+    <!--    Footer    Section  -->
+    <!-- --------------------- -->
+    <footer>
+      <div class="parent-footer-container">
+        <div class="footer-container">
+          <div class="info-container">
+            <div class="follow-info">
+              <div class="logo-img">
+                <img
+                  src="/images/logo/transparent_logo.png"
+                  alt="image_of_logo"
+                />
+              </div>
+              <div class="follow-text">
+                <p>Follow us on</p>
+              </div>
+              <br />
+              <div class="follow-platform">
+                <a href=""
+                  ><img
+                    src="/images/logo/finalfacebooklogo.png"
+                    alt="image_of_facebook"
+                    class="one"
+                /></a>
+                <a href=""
+                  ><img
+                    src="/images/logo/instagramlogo.png"
+                    alt="image_of_instagram"
+                    class="two"
+                /></a>
+                <a href="#" target="_blank"
+                  ><img
+                    src="/images/logo/youtube.png"
+                    alt="image_of_youtube"
+                    class="three"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <h3>Contact</h3>
+            <br />
+            <ul>
+              <li>
+                <p><b>Address</b>: Sundar-Haraicha, Itahari</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Phone</b>: +977-1001001001</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Email</b>: aevum2081@iic.edu.np</p>
+              </li>
+            </ul>
+          </div>
+          <div class="About">
+            <h3>About</h3>
+            <br />
+            <ul>
+              <li><a href="">About Us</a></li>
+              <br />
+              <li>
+                <p>Privacy Policy</p>
+              </li>
+              <br />
+              <li>
+                <p>Terms & Condition</p>
+              </li>
+              <br />
+              <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <br />
+            <ul>
+              <li>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+              </li>
+              <br />
+              <li>
+                <a href="products.html"
+                  ><i class="fa-solid fa-shop"></i> Shop</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="aboutus.html"
+                  ><i class="fa-solid fa-users"></i> About us</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="blog.html"><i class="fa-solid fa-blog"></i> Blog</a>
+              </li>
+              <br />
+              <li>
+                <a href="research.html"
+                  ><i class="fa-solid fa-book-atlas"></i> Research</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy;2025. Introduction to Information System. L1C5 Group 1.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/js/products_list.js"></script>
+    <script type="text/javascript" src="/js/overlay.js"></script>
+    <script type="text/javascript" src="/js/cart.js"></script>
+    <script>
+      document
+        .querySelectorAll(".dropdown .type-container i")
+        .forEach((arrow) => {
+          arrow.addEventListener("click", () => {
+            const dropdown = arrow.closest(".dropdown");
+            dropdown.classList.toggle("active");
+            const subMenu = dropdown.querySelector(".sub-menu");
+            if (subMenu) {
+              subMenu.classList.toggle("active");
+            }
+          });
+        });
+    </script>
+    <script>
+      const clear = document.getElementById("clear-filters");
+      clear.addEventListener("click", function () {
+        document
+          .querySelectorAll('.filter-container input[type="checkbox"]')
+          .forEach((checkbox) => {
+            checkbox.checked = false;
+          });
+      });
+    </script>
+  </body>
+</html>

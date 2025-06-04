@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000022;
+  font-family: sans-serif;
+}
+
+.login-form-parent-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.login-form-container h2 {
+  font-size: 50px;
+  text-align: center;
+  color: rgba(0, 0, 32, 0.8);
+}
+
+.login-form-container p {
+  text-align: center;
+}
+
+.login-form-container {
+  padding: 50px 0px;
+  border: 1px solid white;
+  background-color: #ddd;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+form input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+form button {
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+form button:hover {
+  background-color: #001f3f;
+  color: white;
+  cursor: pointer;
+}
+
+.account {
+  padding-top: 20px;
+  color: #001f3f;
+  text-align: center;
+}
+
+.account a {
+  text-decoration: none;
+  color: #001faa;
+}
+
+.account a:active {
+  color: #002;
+}
+
+.account a:hover {
+  cursor: pointer;
+}
+
+.rem-pas {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.rem-pas a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #001f3f;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 4px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
+.account-heading h1 {
+  color: white;
+  padding-bottom: 10px;
+  text-align: center;
+  padding: 70px 0px;
+  font-size: 60px;
+}

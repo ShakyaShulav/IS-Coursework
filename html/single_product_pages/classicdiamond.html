@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Image Change</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/singleproduct.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/products.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <!-- --------------------- -->
+    <!--  Internal CSS         -->
+    <!-- --------------------- -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- --------------------- -->
+    <!--  Navigation Bar       -->
+    <!-- --------------------- -->
+    <header>
+      <div class="header-content">
+        <div class="headerup">
+          <div class="logo">
+            <a href="/html/index.html"
+              ><img src="/images/logo/transparent_logo.png" alt="image_of_logo"
+            /></a>
+          </div>
+          <div class="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="/html/products.html" method="GET">
+              <input
+                id="searchInput"
+                name="search"
+                type="text"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+          <div id="autocomplete" class="autocomplete"></div>
+
+          <div class="acc-cart">
+            <div class="account">
+              <a href="/html/login.html"
+                ><i class="fa-solid fa-user"></i> Account</a
+              >
+            </div>
+            <div class="cart">
+              <a href="javascript:void(0)" onclick="openNav()"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="headerdown">
+          <div class="headerdown-content">
+            <a href="/html/index.html"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+            <a href="/html/products.html"
+              ><i class="fa-solid fa-shop"></i> Shop</a
+            >
+            <a href="/html/aboutus.html"
+              ><i class="fa-solid fa-users"></i> About us</a
+            >
+            <a href="/html/blog.html"><i class="fa-solid fa-blog"></i> Blog</a>
+            <a href="/html/research.html"
+              ><i class="fa-solid fa-book-atlas"></i> Research</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- --------------------- -->
+    <!--  Product card         -->
+    <!-- --------------------- -->
+    <div class="product-div" style="margin-left: 150px">
+      <div class="product-div-left">
+        <div class="img-container" style="height: 400px">
+          <!-- image box -->
+          <img src="/images/Ghadi/bulova/Classicdiamond.jpg" alt="watch" />
+          <!-- big image -->
+        </div>
+        <div class="hover-container">
+          <!-- small images -->
+          <div><img src="/images/Ghadi/bulova/Classicdiamond.jpg" /></div>
+          <div><img src="/images/Ghadi/bulova/Classicdiamond1.jpg" /></div>
+          <div><img src="/images/Ghadi/bulova/Classicdiamond2.jpg" /></div>
+          <div><img src="/images/Ghadi/bulova/classicdiamond3.jpg" /></div>
+        </div>
+      </div>
+      <div class="product-div-right">
+        <!-- product function and desription box -->
+        <div
+          class="product-brand"
+          style="
+            font-size: 40px;
+            text-align: left;
+            margin-left: 35px;
+            margin-bottom: 5px;
+          "
+        >
+          Bulova
+        </div>
+        <span class="product-name">Classic Diamond Watch</span>
+        <div class="product-rating" style="color: gold">
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span><i class="fas fa-star"></i></span>
+          <span style="color: black">(237 ratings)</span>
+        </div>
+        <div class="product-price">Price : 8,999 RS</div>
+
+        <div class="product-description">
+          <h3>Product Descriptions</h3>
+          <br />
+          <ul>
+            <li>Watch Glass: Sapphire Glass</li>
+            <li>
+              Glass: Sapphire CrystalSustainable packaging that comes with the
+              corresponding PANTONE color accents on the box
+            </li>
+            <li>Approximately 40 hours of power reserve</li>
+            <li>Stainless Steel Bezel with a 24-Hour Display</li>
+            <li>Water Resistance Depth: 100 meters</li>
+          </ul>
+        </div>
+        <div class="counter" style="margin-top: 20px">
+          <!--  counter for product quantity -->
+          <span class="down" onclick="decreaseCount(event,this)"
+            ><div id="minus">-</div></span
+          >
+          <input type="text" value="1" style="font-size: 30px" />
+          <span class="up" onclick="increaseCount(event,this)"
+            ><div id="plus">+</div></span
+          >
+        </div>
+        <div class="btn-groups">
+          <!--  buy and add-to-cart button -->
+          <button type="button" class="add-to-cart-btn">
+            Add to <i class="fas fa-shopping-cart"></i>
+          </button>
+          <button type="button" class="buy-now-btn">
+            <i class="fas fa-wallet"></i>buy now
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- --------------------- -->
+    <!--  Similar products     -->
+    <!-- --------------------- -->
+    <div class="similar-watches-title">Similar Products</div>
+    <div class="similar-watches" style="margin-bottom: 100px">
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/quartzmultifunction.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/titan/quartzmultifunction.jpg" alt="error" />
+          <div class="des">
+            <span>Titan</span>
+            <h5>QUARTZ MULTIFUNCTION WATCH</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">19,000 RS</div>
+              <div class="cart add-to-cart" data-brand = "Titan" data-model="QUARTZ MULTIFUNCTION WATCH" data-price="19999">Add To Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/deepseablack.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/rolex/Deepseablack.jpg" alt="error" />
+          <div class="des">
+            <span>Rolex</span>
+            <h5>DEEP SEA BLACK</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">19,999 RS</div>
+              <div class="cart add-to-cart" data-brand = "Rolex" data-model="DEEP SEA BLACK" data-price="19999">Add To Cart</div>
+            </div>
+          </div>
+
+
+          <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/ae2000w.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/casio/AE2000W.jpg" alt="error" />
+          <div class="des">
+            <span>Casio</span>
+            <h5>AE 2000W</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">3,999 RS</div>
+              <div class="cart add-to-cart" data-brand = "Casio" data-model="AE 2000W" data-price="3999">Add To 
+                Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/ae1000w.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/casio/AE1000W.jpg" alt="error" />
+          <div class="des">
+            <span>Casio</span>
+            <h5>AE 1000W</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">4,999 RS</div>
+              <div class="cart add-to-cart" data-brand="Casio" data-model="AE 1000W" data-price="4999">Add To Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/workweargreen.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/titan/workweargreen.jpg" alt="error" />
+          <div class="des">
+            <span>Titan</span>
+            <h5>WORK WEAR GREEN</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">6,500 RS</div>
+              <div class="cart add-to-cart" data-brand="Titan" data-model="WORK WEAR GREEN" data-price="6500">Add To Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/airkingblack.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/rolex/Airkingblack.jpg" alt="error" />
+          <div class="des">
+            <span>Rolex</span>
+            <h5>AIR KING BLACK</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">24,999 RS</div>
+              <div class="cart add-to-cart" data-brand="Rolex" data-model="AIR KING BLACK" data-price="24999">Add To Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/explorerII.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/rolex/ExploreIIwhite.jpg" alt="error" />
+          <div class="des">
+            <span>Rolex</span>
+            <h5>Explorer II watch</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">29,000 RS</div>
+              <div class="cart add-to-cart" data-brand="Rolex" data-model="Explorer II white" data-price="21750">Add To Cart</div>
+            </div>
+          </div>
+
+      <div class="pro" style="border: none">
+      <a
+        href="/html/single_product_pages/classicquartz.html"
+        style="text-decoration: none; color: inherit"
+        ><!--   making product box functional -->
+          <!-- single product card -->
+          <img src="/images/Ghadi/bulova/classicquartz.jpg" alt="error" />
+          <div class="des">
+            <span>Bulova</span>
+            <h5>CLASSIC QUARTZ</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div></div></a>
+            <div class="price-cart">
+              <div class="price">5,000 RS</div>
+              <div class="cart add-to-cart" data-brand="Bulova" data-model="CLASSIC QUARTZ" data-price="5000">Add To Cart</div>
+            </div>
+          </div>
+
+    </div>
+    <!-- Pop-up Message -->
+    <div class="overlay"></div>
+    <div class="popup">
+      <p>Thank you for your purchase!</p>
+      <button class="close-popup">Close</button>
+    </div>
+
+    <!-- --------------------- -->
+    <!--       Top-button      -->
+    <!-- --------------------- -->
+    <div class="top-button">
+      <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+      <!-- --------------------- -->
+      <!--   Overlay-content     -->
+      <!-- --------------------- -->
+      <div id="myNav" class="overlay-container">
+        <div class="overlay-header">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2>My Cart</h2>
+        </div>
+    
+        <div class="cart-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+    
+        <div class="overlay-parent-footer">
+            <br />
+            <div class="total-price">
+                <h5>Total</h5>
+                <div id="cart-total">0.00 Rs</div>
+            </div>
+            <div class="overlay-footer">
+                <button onclick="clearCart()" id="clear-cart">Clear</button>
+                <button onclick="checkout()" id="checkout-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------- -->
+    <!--      Back-button      -->
+    <!-- --------------------- -->
+    <div class="backbutton">
+      <button onclick="history.back()">Go back</button>
+    </div>
+    <!-- --------------------- -->
+    <!--  Footer section       -->
+    <!-- --------------------- -->
+    <footer>
+      <div class="parent-footer-container">
+        <div class="footer-container">
+          <div class="info-container">
+            <div class="follow-info">
+              <div class="logo-img">
+                <img
+                  src="/images/logo/transparent_logo.png"
+                  alt="image_of_logo"
+                />
+              </div>
+              <div class="follow-text">
+                <p>Follow us on</p>
+              </div>
+              <br />
+              <div class="follow-platform">
+                <a href=""
+                  ><img
+                    src="/images/logo/finalfacebooklogo.png"
+                    alt="image_of_facebook"
+                    class="one"
+                /></a>
+                <a href=""
+                  ><img
+                    src="/images/logo/instagramlogo.png"
+                    alt="image_of_instagram"
+                    class="two"
+                /></a>
+                <a href="#" target="_blank"
+                  ><img
+                    src="/images/logo/youtube.png"
+                    alt="image_of_youtube"
+                    class="three"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <h3>Contact</h3>
+            <br />
+            <ul>
+              <li>
+                <p><b>Address</b>: Sundar-Haraicha, Itahari</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Phone</b>: +977-1001001001</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Email</b>: aevum2081@iic.edu.np</p>
+              </li>
+            </ul>
+          </div>
+          <div class="About">
+            <h3>About</h3>
+            <br />
+            <ul>
+              <li><a href="/html/aboutus.html">About Us</a></li>
+              <br />
+              <li>
+                <p>Privacy Policy</p>
+              </li>
+              <br />
+              <li>
+                <p>Terms & Condition</p>
+              </li>
+              <br />
+              <li><a href="/html/aboutus.html#feedback">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <br />
+            <ul>
+              <li>
+                <a href="/html/index.html"
+                  ><i class="fa-solid fa-house"></i> Home</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="/html/products.html"
+                  ><i class="fa-solid fa-shop"></i> Shop</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="/html/aboutus.html"
+                  ><i class="fa-solid fa-users"></i> About us</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="/html/blog.html"
+                  ><i class="fa-solid fa-blog"></i> Blog</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="/html/research.html"
+                  ><i class="fa-solid fa-book-atlas"></i> Research</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy;2025. Introduction to Information System. L1C5 Group 1.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/counter.js"></script>
+    <script src="/js/singleproduct.js"></script>
+    <script src="/js/buynow.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/overlay.js"></script>
+  </body>
+</html>

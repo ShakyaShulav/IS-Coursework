@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #002;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #274b72;
+}
+
+.profile img {
+  /* width: 250px; */
+  height: 400px;
+
+  /* if you want cicular picture, you can */
+  /* border-radius:50% ; */
+
+  margin-bottom: 15px;
+  border: 4px solid #424186;
+}
+
+.profile h2 {
+  font-size: 2.1rem;
+  margin: 10px 0;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  color: #666;
+  padding: 0px 93px;
+}
+
+/* portfolio section */
+
+.portfolio {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #274b72;
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.project h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0;
+}
+
+.back-button button {
+  background-color: #001f3f;
+  color: white;
+  width: 120px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-button button:hover {
+  background-color: #003d7a;
+}
+
+/* footer section */
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #002;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ----Contact Us Section---- */
+
+.feedback {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.feedback h2 {
+  margin-left: 525px;
+  font-size: 2.2rem;
+  color: #424186;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 622px;
+}
+
+button:hover {
+  background-color: #003d7a;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 200px);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* social-media-handles */
+.social-media-handles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-media-handles a:hover {
+  transform: scale(1.09);
+}

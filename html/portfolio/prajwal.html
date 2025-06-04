@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prajwal's Portfolio</title>
+    <link rel="stylesheet" href="/css/portfolio.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/logo/finalheadicon.ico"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to Prajwal's Portfolio</h1>
+    </header>
+    <div class="profile">
+      <img src="/images/portfolio/prajwal.jpg" alt="img" />
+      <h2>Prajwal Kafle</h2>
+      <p>
+        Hi, I am Prajwal Kafle. I am currently studying at
+        <a href="https://iic.edu.np/"> Itahari International College</a>
+        and I am passionate about technology and design.
+      </p>
+      <br />
+      <div class="portfolio">
+        <h3>Featured Skills</h3>
+        <div class="feature-container">
+          <div class="project">
+            <h2>HTML5</h2>
+            <p>Intermediate in semantic HTML, web accessibility standards</p>
+          </div>
+
+          <div class="project">
+            <h2>CSS3</h2>
+            <p>CSS Grid, Flexbox, Basic Animations</p>
+          </div>
+
+          <div class="project">
+            <h2>JavaScript</h2>
+            <p>Basic DOM Manipulation</p>
+          </div>
+
+          <div class="project">
+            <h2>Database Mangement</h2>
+            <p>MySql, Database creation and Manipulation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="contact">
+      <h3>Contact me</h3>
+      <form id="myForm">
+        Name:
+        <input
+          type="text"
+          id="name"
+          required
+          name="name"
+          placeholder="Enter Your Name"
+          style="border: 2px solid #578296; margin-bottom: 10px"
+        />
+        Email:
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Your Email"
+          name="email"
+          style="border: 2px solid #6a99af; margin-bottom: 10px"
+        />
+        Message:
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Message"
+          required
+          name="message"
+          style="border: 1px solid #6a99af; margin-bottom: 10px"
+        ></textarea>
+        <button
+          type="submit"
+          style="border: 1px solid #2d4f60; margin-bottom: 10px"
+          onclick="validateForm()"
+        >
+          Submit
+        </button>
+      </form>
+
+      <div class="social-media-handles">
+        <a href=""
+          ><img
+            src="/images/logo/portfoliofblogo.png"
+            class="four"
+            alt="logo of facebook"
+            style="height: 38px; width: 38px"
+        /></a>
+        <a href=""
+          ><img
+            src="/images/logo/portfolioinstalogo.png"
+            class="four"
+            alt="logo of instagram"
+            style="height: 30px; width: 30px"
+        /></a>
+      </div>
+    </div>
+
+    <div class="back-button">
+      <button onclick="history.back()">Go Back</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Samir Rai . All rights reserved.</p>
+    </footer>
+
+    <script src="/js/portfolio.js"></script>
+  </body>
+</html>

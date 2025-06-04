@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aevum</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/aboutus.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../images/logo/finalheadicon.ico"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="headerup">
+          <div class="logo">
+            <a href="/html/index.html"
+              ><img src="/images/logo/transparent_logo.png" alt="image_of_logo"
+            /></a>
+          </div>
+          <div class="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <form action="/html/products.html" method="GET">
+              <input
+                id="searchInput"
+                name="search"
+                type="text"
+                placeholder="Search"
+              />
+            </form>
+          </div>
+          <div class="acc-cart">
+            <div class="account">
+              <a href="/html/login.html"
+                ><i class="fa-solid fa-user"></i> Account</a
+              >
+            </div>
+            <div class="cart-btn">
+              <a href="javascript:void(0)" onclick="openNav()"
+                ><i class="fa-solid fa-cart-shopping"></i> Cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="headerdown">
+          <div class="headerdown-content">
+            <a href="/html/index.html"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+            <a href="/html/products.html"
+              ><i class="fa-solid fa-shop"></i> Shop</a
+            >
+            <a href="/html/aboutus.html"
+              ><i class="fa-solid fa-users"></i> About us</a
+            >
+            <a href="/html/blog.html"><i class="fa-solid fa-blog"></i> Blog</a>
+            <a href="research.html"
+              ><i class="fa-solid fa-book-atlas"></i> Research</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- --------------------- -->
+      <!--     Aboutus-section   -->
+      <!-- --------------------- -->
+      <section class="about-us">
+        <h2 style="text-align: center">Company Information</h2>
+        <br />
+        <h2>About AEVUM</h2>
+        <br />
+        <p>
+          AEVUM is an online watch and time brand dedicated to crafting timeless
+          pieces of watches that blend elegance and sophistication with
+          functionality. Discovered with vision to redefine timekeeping, AEVUM
+          is at the junction of tradition and innovation, conveying exceptional
+          watches styled to complement every instant of life. Our company
+          showcases a canorous fusion of modernistic aesthetics and classic
+          technique, catering to entity who value precision, calibre, and flair.
+          Each timepiece is considerately designed to consider the personality
+          and desire of its propitiator, making it a statement of specification
+          and a reminder to embrace the journey of time. At AEVUM, we prioritize
+          sustainability and ethical practices, ensuring our watches are as
+          responsible as they are elegant. We aim to inspire a global community
+          that treasures the art of timekeeping and the stories that unfold with
+          every tick of the clock.
+        </p>
+
+        <h2>Team Member Portfolios</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Responsibilities</th>
+            <th>Contact Information</th>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="/html/portfolio/pranima.html"> Pranima Bhattarai </a>
+            </td>
+            <td>About Us Designer</td>
+            <td>Design, implement front-end components.</td>
+            <td>np05cp4npa240195@iic.edu.np</td>
+          </tr>
+
+          <tr>
+            <td><a href="/html/portfolio/shulav.html"> Shulav Shakya </a></td>
+            <td>Frontend Developer</td>
+            <td>Design, implement front-end components.</td>
+            <td>np05cp4npa240082@iic.edu.np</td>
+          </tr>
+
+          <tr>
+            <td><a href="/html/portfolio/samir.html"> Samir Rai </a></td>
+            <td>Frontend Developer</td>
+            <td>Design, implement front-end components.</td>
+            <td>np05cp4npa240191@iic.edu.np</td>
+          </tr>
+
+          <tr>
+            <td><a href="/html/portfolio/james.html"> James Tamang </a></td>
+            <td>Frontend Developer</td>
+            <td>Design, implement front-end components.</td>
+            <td>np05cp4npa240292@iic.edu.np</td>
+          </tr>
+
+          <tr>
+            <td><a href="/html/portfolio/prajwal.html"> Prajwal Kafle </a></td>
+            <td>Frontend Developer</td>
+            <td>Design, implement front-end components.</td>
+            <td>np05cp4npa240204@iic.edu.np</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- --------------------- -->
+      <!--      Feedback-form    -->
+      <!-- --------------------- -->
+      <div id="feedback">
+        <h2>Feedback Form</h2>
+
+        <form id="myForm">
+          Name:
+          <input
+            type="text"
+            id="name"
+            required
+            name="name"
+            placeholder="Enter Your Name"
+            style="border: 2px solid #578296; margin-bottom: 10px"
+          />
+          Email:
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Your Email"
+            name="email"
+            style="border: 2px solid #6a99af; margin-bottom: 10px"
+          />
+          Message:
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Message"
+            required
+            name="message"
+            style="border: 1px solid #6a99af; margin-bottom: 10px"
+          ></textarea>
+          <button
+            type="submit"
+            style="border: 1px solid #2d4f60; margin-bottom: 10px"
+            onclick="validateForm()"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <!-- --------------------- -->
+      <!--       Top-button      -->
+      <!-- --------------------- -->
+      <div class="top-button">
+        <a href="#">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </main>
+    <!-- --------------------- -->
+    <!--   Overlay-content     -->
+    <!-- --------------------- -->
+    <div id="myNav" class="overlay-container">
+      <div class="overlay-header">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <h2 style="margin: 0; color: black">Your Cart</h2>
+      </div>
+      <hr />
+      <ul id="cart-items">
+        <!--items are dynamically generated here-->
+      </ul>
+      <div class="overlay-parent-footer">
+        <hr />
+        <br />
+        <div class="total-price" style="margin-right: 30px" id="cart-total">
+          Total: 0.Rs
+        </div>
+        <div class="overlay-footer">
+          <button onclick="clear()" style="margin-right: 15px" id="clear-cart">
+            Clear
+          </button>
+          <button onclick="checkout()" id="checkout-button">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="parent-footer-container">
+        <div class="footer-container">
+          <div class="info-container">
+            <div class="follow-info">
+              <div class="logo-img">
+                <img
+                  src="../images/logo/transparent_logo.png"
+                  alt="image_of_logo"
+                />
+              </div>
+              <div class="follow-text">
+                <p>Follow us on</p>
+              </div>
+              <br />
+              <div class="follow-platform">
+                <a href=""
+                  ><img
+                    src="../images/logo/finalfacebooklogo.png"
+                    alt="image_of_facebook"
+                    class="one"
+                /></a>
+                <a href=""
+                  ><img
+                    src="../images/logo/instagramlogo.png"
+                    alt="image_of_instagram"
+                    class="two"
+                /></a>
+                <a href="https://youtu.be/xvFZjo5PgG0" target="_blank"
+                  ><img
+                    src="../images/logo/youtube.png"
+                    alt="image_of_youtube"
+                    class="three"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <h3>Contact</h3>
+            <br />
+            <ul>
+              <li>
+                <p><b>Address</b>: Sundar-Haraicha, Itahari</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Phone</b>: +977-1001001001</p>
+              </li>
+              <br />
+              <li>
+                <p><b>Email</b>: aevum2081@iic.edu.np</p>
+              </li>
+            </ul>
+          </div>
+          <div class="About">
+            <h3>About</h3>
+            <br />
+            <ul>
+              <li><a href="">About Us</a></li>
+              <br />
+              <li>
+                <p>Privacy Policy</p>
+              </li>
+              <br />
+              <li>
+                <p>Terms & Condition</p>
+              </li>
+              <br />
+              <li><a href="/html/aboutus.html#feedback">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="quicklinks">
+            <h3>Quick Links</h3>
+            <br />
+            <ul>
+              <li>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+              </li>
+              <br />
+              <li>
+                <a href="products.html"
+                  ><i class="fa-solid fa-shop"></i> Shop</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="aboutus.html"
+                  ><i class="fa-solid fa-users"></i> About us</a
+                >
+              </li>
+              <br />
+              <li>
+                <a href="blog.html"><i class="fa-solid fa-blog"></i> Blog</a>
+              </li>
+              <br />
+              <li>
+                <a href="research.html"
+                  ><i class="fa-solid fa-book-atlas"></i> Research</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy;2025. Introduction to Information System. L1C5 Group 1.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/aboutUs.js"></script>
+    <script src="/js/overlay.js"></script>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>
